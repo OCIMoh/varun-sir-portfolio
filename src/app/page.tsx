@@ -9,10 +9,11 @@ import {
 } from "@/components/Motion";
 import { CursorTrigger } from "@/components/Cursor";
 import { ParallaxHero } from "@/components/ParallaxHero";
+import { ScrollSection } from "@/components/ScrollSection";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="container video-overlay" style={{ position: "relative", zIndex: 1 }}>
       {/* 
         HERO SECTION: Continuous Spatial Immersion 
       */}
@@ -57,12 +58,10 @@ export default function Home() {
         </section>
       </ParallaxHero>
 
-      <div className="divider"></div>
-
       {/* 
         SELECTED ARCHITECTURES: Shared Element Morphs (Barba.js pattern)
       */}
-      <section className="section" id="work">
+      <ScrollSection className="section" id="work">
         <RevealGroup style={{ marginBottom: "var(--spacing-lg)" }}>
           <RevealItem>
             <div className="accent-badge" style={{ marginBottom: "0.5rem" }}>
@@ -99,7 +98,7 @@ export default function Home() {
                   <Tilt3DCard className="project-card-interactive">
                     <div className="project-meta-pill">Physical Multi-Agent Routing Engine</div>
                     <ParallaxImage 
-                      src="/images/joxy_agent_os.jpg" 
+                      src="/generated assets/vh-joxy-01-kinetic.png" 
                       alt="Joxy Agent OS - Machined brass routing tracks and dark slate execution nodes" 
                       aspectRatio="16 / 11"
                       layoutId="project-image-joxy"
@@ -121,8 +120,6 @@ export default function Home() {
             </RevealItem>
           </div>
         </RevealGroup>
-
-        <div className="divider" style={{ opacity: 0.5, margin: "var(--spacing-lg) 0" }}></div>
 
         {/* CASE STUDY 02: BOOSTIT */}
         <RevealGroup className="grid-asymmetric" style={{ marginBottom: "var(--spacing-lg)" }}>
@@ -151,7 +148,7 @@ export default function Home() {
                   <Tilt3DCard className="project-card-interactive">
                     <div className="project-meta-pill">Deterministic Video Assembly</div>
                     <ParallaxImage 
-                      src="/images/boostit_pipeline.jpg" 
+                      src="/generated assets/vh-boostit-01-moving-frames.png" 
                       alt="Boostit Kinetic Pipeline - Brushed aluminum rails and dark smoked glass partitions" 
                       aspectRatio="16 / 11"
                       layoutId="project-image-boostit"
@@ -173,14 +170,12 @@ export default function Home() {
             </RevealItem>
           </div>
         </RevealGroup>
-      </section>
-
-      <div className="divider"></div>
+      </ScrollSection>
 
       {/* 
         TACTILE SYSTEMS & PHYSICAL RIGOR (Atmospheric Transition)
       */}
-      <section className="section">
+      <ScrollSection className="section">
         <RevealGroup className="grid-editorial" style={{ alignItems: "center" }}>
           <div>
             <RevealItem>
@@ -205,7 +200,7 @@ export default function Home() {
             <RevealItem>
               <Tilt3DCard className="project-card-interactive" style={{ maxWidth: "600px" }}>
                 <ParallaxImage 
-                  src="/images/systems_detail.jpg" 
+                  src="/generated assets/vh-detail-05-aperture.png" 
                   alt="Architectural travertine louvers with soft grazing light" 
                   aspectRatio="16 / 10"
                 />
@@ -218,14 +213,12 @@ export default function Home() {
             </RevealItem>
           </div>
         </RevealGroup>
-      </section>
-
-      <div className="divider"></div>
+      </ScrollSection>
 
       {/* 
         TECHNICAL JOURNAL: Curated Insights with Stock Thumbnails
       */}
-      <section className="section" id="writing">
+      <ScrollSection className="section" id="writing">
         <RevealGroup className="grid-editorial">
           <RevealItem>
             <div className="accent-badge" style={{ marginBottom: "0.5rem" }}>
@@ -252,7 +245,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div style={{ width: "90px", height: "90px", borderRadius: "4px", overflow: "hidden", flexShrink: 0 }} className="image-container-editorial">
-                      <img src="/images/stock/journal_watcher.jpg" alt="Watcher pattern architectural stone" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      <img src="/generated assets/vh-economics-01-balance.png" alt="Watcher pattern architectural stone" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                   </div>
                 </Link>
@@ -273,7 +266,7 @@ export default function Home() {
                       </p>
                     </div>
                     <div style={{ width: "90px", height: "90px", borderRadius: "4px", overflow: "hidden", flexShrink: 0 }} className="image-container-editorial">
-                      <img src="/images/stock/journal_economics.jpg" alt="Economics architectural cantilever" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      <img src="/generated assets/vh-joxy-02-memory-layers.png" alt="Economics architectural cantilever" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                   </div>
                 </Link>
@@ -289,7 +282,7 @@ export default function Home() {
             </RevealItem>
           </div>
         </RevealGroup>
-      </section>
+      </ScrollSection>
     </div>
   );
 }

@@ -15,12 +15,17 @@ export function ParallaxHero({ children }: { children: React.ReactNode }) {
 
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "35%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
+  const contentBlur = useTransform(scrollYProgress, [0, 0.65], ["blur(0px)", "blur(12px)"]);
+  const contentScale = useTransform(scrollYProgress, [0, 0.65], [1, 0.95]);
 
   return (
     <div 
       ref={containerRef} 
       style={{ 
-        minHeight: "140vh",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
         position: "relative",
         overflow: "hidden",
         backgroundColor: "transparent"
@@ -35,11 +40,12 @@ export function ParallaxHero({ children }: { children: React.ReactNode }) {
           zIndex: 3,
           y: shouldReduceMotion ? 0 : contentY,
           opacity: shouldReduceMotion ? 1 : contentOpacity,
-          paddingTop: "6vh",
+          scale: shouldReduceMotion ? 1 : contentScale,
+          filter: shouldReduceMotion ? "none" : contentBlur,
           pointerEvents: "none" // Let pointer events fall through to WebGL except for links
         }}
       >
-        <div style={{ pointerEvents: "auto" }}>
+        <div style={{ pointerEvents: "auto", width: "100%" }}>
           {children}
         </div>
       </motion.div>

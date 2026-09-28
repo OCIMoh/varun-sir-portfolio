@@ -31,7 +31,7 @@ export function MotionLayoutProvider({ children }: { children: ReactNode }) {
 // FrozenRoute isolates the routing context so exiting pages don't instantly update to the incoming page's content
 function FrozenRoute({ children }: { children: ReactNode }) {
   const context = React.useContext(LayoutRouterContext);
-  const frozen = useRef(context).current;
+  const [frozen] = React.useState(context);
 
   return (
     <LayoutRouterContext.Provider value={frozen}>
@@ -232,8 +232,6 @@ export function RevealGroup({
   className?: string;
   style?: React.CSSProperties;
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-8% 0px" });
   const shouldReduceMotion = useReducedMotion();
 
   const container = {
@@ -249,10 +247,10 @@ export function RevealGroup({
 
   return (
     <motion.div
-      ref={ref}
       variants={container}
       initial="hidden"
-      animate={isInView ? "show" : "hidden"}
+      whileInView="show"
+      viewport={{ once: true, margin: "0px 0px -8% 0px" }}
       className={className}
       style={style}
     >
@@ -299,8 +297,6 @@ export function RevealTitle({
   className?: string; 
   delay?: number;
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-5% 0px" });
   const shouldReduceMotion = useReducedMotion();
 
   if (shouldReduceMotion) {
@@ -309,10 +305,10 @@ export function RevealTitle({
 
   return (
     <motion.div
-      ref={ref}
       className={className}
       initial={{ opacity: 0, y: 35, clipPath: "inset(100% 0 0 0)" }}
-      animate={isInView ? { opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" } : {}}
+      whileInView={{ opacity: 1, y: 0, clipPath: "inset(0% 0 0 0)" }}
+      viewport={{ once: true, margin: "0px 0px -5% 0px" }}
       transition={{ duration: 1.3, ease: easeEditorial, delay }}
     >
       {children}

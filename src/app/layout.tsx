@@ -4,6 +4,8 @@ import { CursorProvider, CursorTrigger } from "@/components/Cursor";
 import { Wayfinding } from "@/components/Wayfinding";
 import { ScrollProgressBar, MotionLayoutProvider } from "@/components/Motion";
 import { World } from "@/components/WebGL/World";
+import { Header } from "@/components/Header";
+import { Preloader } from "@/components/Preloader";
 import Link from "next/link";
 import "./globals.css";
 
@@ -82,35 +84,21 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Preloader />
         <World />
         <a href="#main-content" className="skip-link">Skip to main content</a>
         
         <CursorProvider>
           <SmoothScroll>
-            <MotionLayoutProvider>
               <ScrollProgressBar />
               <Wayfinding />
 
-              <header>
-                <nav className="nav" aria-label="Primary Navigation">
-                  <CursorTrigger>
-                    <Link href="/" className="nav-brand">
-                      <span className="nav-brand-dot" aria-hidden="true" />
-                      <span>Varun Handa</span>
-                    </Link>
-                  </CursorTrigger>
-
-                  <div className="nav-links">
-                    <CursorTrigger><Link href="/about">About</Link></CursorTrigger>
-                    <CursorTrigger><Link href="/experience">Experience</Link></CursorTrigger>
-                    <CursorTrigger><Link href="/writing">Writing</Link></CursorTrigger>
-                    <CursorTrigger><Link href="/contact">Contact</Link></CursorTrigger>
-                  </div>
-                </nav>
-              </header>
+              <Header />
               
               <main id="main-content">
-                {children}
+                <MotionLayoutProvider>
+                  {children}
+                </MotionLayoutProvider>
               </main>
               
               <footer className="footer" role="contentinfo">
@@ -123,7 +111,6 @@ export default function RootLayout({
                   </a>
                 </CursorTrigger>
               </footer>
-            </MotionLayoutProvider>
           </SmoothScroll>
         </CursorProvider>
       </body>

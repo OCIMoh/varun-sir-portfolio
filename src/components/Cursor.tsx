@@ -27,8 +27,9 @@ export function CursorProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Touch & pointer detection
-    if (window.matchMedia("(pointer: coarse)").matches || window.matchMedia("(hover: none)").matches) {
-      setIsTouchDevice(true);
+    const isTouch = window.matchMedia("(pointer: coarse)").matches || window.matchMedia("(hover: none)").matches;
+    if (isTouch) {
+      setTimeout(() => setIsTouchDevice(true), 0);
     }
   }, []);
 

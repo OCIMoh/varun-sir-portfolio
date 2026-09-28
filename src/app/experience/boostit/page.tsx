@@ -51,7 +51,7 @@ export default function BoostitPage() {
         <RevealItem>
           <Tilt3DCard className="project-card-interactive">
             <ParallaxImage
-              src="/images/boostit_pipeline.jpg"
+              src="/generated assets/vh-boostit-01-moving-frames.png"
               alt="Boostit Deterministic Video Pipeline - Brushed aluminum rails, steel rods, and smoked glass"
               aspectRatio="21 / 9"
               layoutId="project-image-boostit"
@@ -104,7 +104,7 @@ export default function BoostitPage() {
                   Bridged generative AI (Google Veo, diffusion models) with rigid software engineering. The pipeline transitions deterministically through 7 discrete stages: Context → Strategy → Script → AI Generation → FFmpeg Stitching → Variations → Automated Delivery.
                 </p>
                 <div style={{ maxWidth: "600px", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <img src="/images/stock/boostit_matrix.jpg" alt="Deterministic Pipeline Matrix" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                  <img src="/generated assets/vh-boostit-02-mechanical-rhythm.png" alt="Deterministic Pipeline Matrix" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
                   <div style={{ padding: "0.75rem 1.25rem", background: "var(--bg-card)", borderTop: "1px solid var(--border-color)" }}>
                     <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.4 / Combinatorial Modular Variation Assembly</span>
                   </div>
@@ -121,7 +121,7 @@ export default function BoostitPage() {
                   Engineered distributed worker infrastructure using BullMQ, Redis clusters, and headless FFmpeg rendering nodes to process concurrent video renders asynchronously without thread blocking or memory leaks.
                 </p>
                 <div style={{ maxWidth: "600px", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <img src="/images/stock/boostit_render_farm.jpg" alt="Asynchronous Compute Cluster Racks" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                  <img src="/generated assets/vh-detail-04-amber-interior.png" alt="Asynchronous Compute Cluster Racks" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
                   <div style={{ padding: "0.75rem 1.25rem", background: "var(--bg-card)", borderTop: "1px solid var(--border-color)" }}>
                     <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.5 / Distributed Async Queue Nodes (BullMQ &amp; Redis)</span>
                   </div>

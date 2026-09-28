@@ -1,5 +1,5 @@
 :root {
-  /* Editorial + Architectural Palette */
+  /* Editorial + Architectural Palette - Original Light Theme */
   --bg-color: #F4F2EA; /* Warm Ivory — primary background */
   --bg-alt: #EBE8DE; /* Slightly deeper warm stone for contrast */
   --bg-card: rgba(244, 242, 234, 0.85); /* Frosted ivory card surface */
@@ -11,7 +11,7 @@
   --accent-cobalt: #2448FF; /* Rare deliberate accent */
   --accent-cobalt-subtle: rgba(36, 72, 255, 0.08);
 
-  --font-serif: 'Neuton', Georgia, serif;
+  --font-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   
   --spacing-xs: 0.5rem;
@@ -115,6 +115,7 @@ a {
   line-height: 1.02;
   letter-spacing: -0.015em;
   margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
 }
 
 .display-3 {
@@ -123,6 +124,7 @@ a {
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  color: var(--text-primary);
 }
 
 .text-lead {
@@ -131,6 +133,34 @@ a {
   line-height: 1.45;
   color: var(--text-secondary);
   max-width: 48ch;
+}
+
+/* ==========================================================================
+   Home Page Video Overlay Theme
+   ========================================================================== */
+
+.video-overlay {
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-tertiary: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --bg-card: rgba(15, 15, 17, 0.45);
+}
+
+.video-overlay .display-1,
+.video-overlay .display-2,
+.video-overlay .display-3,
+.video-overlay .text-lead,
+.video-overlay .text-meta,
+.video-overlay .accent-badge,
+.video-overlay .btn-editorial {
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.video-overlay .tag {
+  background: rgba(15, 15, 17, 0.6);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .text-body {
@@ -265,6 +295,60 @@ a {
   }
 }
 
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-color);
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6vw;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: block;
+}
+
 .nav-brand {
   font-weight: 600;
   color: var(--text-primary);
@@ -328,7 +412,6 @@ a {
 
 .footer {
   padding: var(--spacing-lg) 6vw;
-  border-top: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -339,7 +422,8 @@ a {
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background-color: var(--bg-color);
+  background-color: transparent;
+  border-top: none;
 }
 
 @media (min-width: 1400px) {

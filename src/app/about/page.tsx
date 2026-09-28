@@ -32,7 +32,7 @@ export default function AboutPage() {
         <RevealItem>
           <Tilt3DCard className="project-card-interactive">
             <ParallaxImage
-              src="/images/systems_detail.jpg"
+              src="/generated assets/vh-detail-01-stone-rhythm.png"
               alt="Architectural travertine louvers with soft grazing light"
               aspectRatio="21 / 9"
             />
