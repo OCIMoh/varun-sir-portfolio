@@ -9,7 +9,7 @@ export default function WritingPage() {
       tag: "Agentic Infra",
       title: "Reliability Over Illusion: The Watcher Pattern",
       description: "Generating plausible output is easy. Reliable execution is hard. Exploring heartbeats, stale-task detection, bounded retries, and explicit exit criteria in long-running agent workflows.",
-      image: "/images/stock/journal_watcher.jpg",
+      image: "/generated-assets/joxy_ui_agent_profile.jpg",
       slug: "#"
     },
     {
@@ -17,7 +17,7 @@ export default function WritingPage() {
       tag: "Architecture",
       title: "Agentic Memory: Beyond Chat History",
       description: "Chat history is not memory. Real agentic memory requires scoped stores, consolidation, supersession, and controlled forgetting. Old facts must be superseded, not kept alongside contradictory new ones.",
-      image: "/images/stock/journal_memory.jpg",
+      image: "/generated-assets/joxy_ui_node_graph.jpg",
       slug: "#"
     },
     {
@@ -25,7 +25,7 @@ export default function WritingPage() {
       tag: "Economics",
       title: "Big Models Plan, Small Models Execute",
       description: "A framework for reducing LLM token costs by up to 90% without sacrificing capability. How the Planner/Worker/Unblocker pattern intelligently routes inference based on task complexity.",
-      image: "/images/stock/journal_economics.jpg",
+      image: "/generated-assets/boostit_ui_compute.jpg",
       slug: "#"
     },
     {
@@ -33,7 +33,7 @@ export default function WritingPage() {
       tag: "Pipelines",
       title: "Creative Velocity: Software as a Pipeline",
       description: "Treating creative ad production as a deterministic software pipeline. How we bridged async video generation with distributed workers to produce massive video volume deterministically.",
-      image: "/images/stock/journal_pipeline.jpg",
+      image: "/generated-assets/boostit_ui_pipeline.jpg",
       slug: "#"
     }
   ];

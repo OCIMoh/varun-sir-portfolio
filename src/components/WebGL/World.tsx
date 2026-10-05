@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { VideoScrubber } from "../VideoScrubber";
+import { FrameScrubber } from "./FrameScrubber";
 import { AnimatePresence, motion } from "framer-motion";
 
 export function World() {
@@ -33,7 +33,7 @@ export function World() {
               pointerEvents: "none"
             }}
           >
-            <VideoScrubber src="/generated assets/landing-page-scrub.mp4" />
+            <FrameScrubber frameFolder="/generated-assets/hero-frames" frameCount={240} />
           </motion.div>
         )}
       </AnimatePresence>

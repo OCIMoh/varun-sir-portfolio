@@ -32,7 +32,7 @@ export default function AboutPage() {
         <RevealItem>
           <Tilt3DCard className="project-card-interactive">
             <ParallaxImage
-              src="/generated assets/vh-detail-01-stone-rhythm.png"
+              src="/images/architectural%20image.png"
               alt="Architectural travertine louvers with soft grazing light"
               aspectRatio="21 / 9"
             />
@@ -56,8 +56,8 @@ export default function AboutPage() {
               </p>
               <div style={{ maxWidth: "280px", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border-color)", marginBottom: "1.5rem" }}>
                 <img 
-                  src="/images/stock/portrait_varun.jpg" 
-                  alt="Varun Handa - Executive Portrait Placeholder" 
+                  src="/images/photo.png" 
+                  alt="Varun Handa - Executive Portrait" 
                   style={{ width: "100%", height: "340px", objectFit: "cover", filter: "contrast(1.04)" }} 
                 />
                 <div style={{ padding: "0.5rem 0.75rem", background: "var(--bg-card)", borderTop: "1px solid var(--border-color)" }}>

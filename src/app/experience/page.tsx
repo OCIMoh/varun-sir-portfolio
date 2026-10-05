@@ -73,8 +73,8 @@ export default function ExperiencePage() {
                   <Tilt3DCard className="project-card-interactive">
                     <div className="project-meta-pill">Joxy Agent OS Architecture</div>
                     <ParallaxImage 
-                      src="/images/joxy_agent_os.jpg" 
-                      alt="Joxy.ai Multi-Agent Routing Sculpture" 
+                      src="/generated-assets/joxy_ui_dashboard.jpg" 
+                      alt="Joxy.ai Agent Dashboard UI" 
                       aspectRatio="16 / 10"
                       layoutId="project-image-joxy"
                     />
@@ -136,8 +136,8 @@ export default function ExperiencePage() {
                   <Tilt3DCard className="project-card-interactive">
                     <div className="project-meta-pill">Boostit Video Assembly Line</div>
                     <ParallaxImage 
-                      src="/images/boostit_pipeline.jpg" 
-                      alt="Boostit Kinetic Video Assembly Pipeline" 
+                      src="/generated-assets/boostit_ui_pipeline.jpg" 
+                      alt="Boostit Video Pipeline UI" 
                       aspectRatio="16 / 10"
                       layoutId="project-image-boostit"
                     />
@@ -176,13 +176,7 @@ export default function ExperiencePage() {
         <RevealGroup className="grid-editorial" style={{ gap: "var(--spacing-lg)" }}>
           <RevealItem>
             <Tilt3DCard className="project-card-interactive">
-              <div className="project-meta-pill">Distributed Event Mesh</div>
-              <ParallaxImage
-                src="/images/stock/archived_mesh.jpg"
-                alt="Distributed Event Mesh Architecture"
-                aspectRatio="16 / 10"
-              />
-              <div style={{ padding: "1.5rem", background: "var(--bg-card)" }}>
+              <div style={{ padding: "1.5rem", background: "var(--bg-card)", minHeight: "150px" }}>
                 <span className="text-meta">High-Throughput Streaming</span>
                 <h3 className="display-3" style={{ fontSize: "1.6rem", margin: "0.5rem 0" }}>Real-time Event Broker Mesh</h3>
                 <p className="text-body" style={{ fontSize: "0.9rem" }}>
@@ -194,13 +188,7 @@ export default function ExperiencePage() {
 
           <RevealItem>
             <Tilt3DCard className="project-card-interactive">
-              <div className="project-meta-pill">Financial State Machine</div>
-              <ParallaxImage
-                src="/images/stock/archived_ledger.jpg"
-                alt="Transactional Ledger Core"
-                aspectRatio="16 / 10"
-              />
-              <div style={{ padding: "1.5rem", background: "var(--bg-card)" }}>
+              <div style={{ padding: "1.5rem", background: "var(--bg-card)", minHeight: "150px" }}>
                 <span className="text-meta">Consensus &amp; Replication</span>
                 <h3 className="display-3" style={{ fontSize: "1.6rem", margin: "0.5rem 0" }}>Resilient Transaction Ledger</h3>
                 <p className="text-body" style={{ fontSize: "0.9rem" }}>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { CursorTrigger } from "@/components/Cursor";
 
 export function Header() {
@@ -34,7 +34,7 @@ export function Header() {
     { href: "/contact", label: "Contact" }
   ];
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     closed: {
       opacity: 0,
       y: "-100%",
@@ -53,7 +53,7 @@ export function Header() {
     }
   };
 
-  const linkVariants = {
+  const linkVariants: Variants = {
     closed: { y: 20, opacity: 0 },
     open: (i: number) => ({
       y: 0,

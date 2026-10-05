@@ -51,14 +51,14 @@ export default function JoxyPage() {
         <RevealItem>
           <Tilt3DCard className="project-card-interactive">
             <ParallaxImage
-              src="/generated assets/vh-joxy-01-kinetic.png"
-              alt="Joxy Agent OS Architecture - Physical brass routing and slate execution nodes"
+              src="/generated-assets/joxy_ui_dashboard.jpg"
+              alt="Joxy Agent OS Dashboard - Campaign management and AI agent overview interface"
               aspectRatio="21 / 9"
               layoutId="project-image-joxy"
             />
             <div style={{ padding: "1.25rem 2rem", background: "var(--bg-card)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="text-meta">Fig 02.1 / The Joxy Agent OS Core Routing Architecture</span>
-              <span className="accent-badge">Operational Architecture</span>
+              <span className="text-meta">Fig 02.1 / The Joxy Agent OS Core Dashboard</span>
+              <span className="accent-badge">Platform UI</span>
             </div>
           </Tilt3DCard>
         </RevealItem>
@@ -88,7 +88,7 @@ export default function JoxyPage() {
 
       <div className="divider"></div>
 
-      {/* System Deep-Dive with Stock Architecture Visuals */}
+      {/* System Deep-Dive with Architecture Visuals */}
       <section className="section">
         <RevealGroup className="grid-editorial">
           <RevealItem>
@@ -104,9 +104,9 @@ export default function JoxyPage() {
                   Scoped stores with consolidation, supersession, and controlled forgetting. Contradictory old facts are cleanly superseded rather than kept in prompt history, preventing context contamination.
                 </p>
                 <div style={{ maxWidth: "600px", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <img src="/generated assets/vh-joxy-02-memory-layers.png" alt="Scoped Memory Spatial Architecture" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                  <img src="/generated-assets/joxy_ui_node_graph.jpg" alt="Joxy Node Graph - Dark mode agent workflow editor" style={{ width: "100%", height: "240px", objectFit: "cover", objectPosition: "top" }} />
                   <div style={{ padding: "0.75rem 1.25rem", background: "var(--bg-card)", borderTop: "1px solid var(--border-color)" }}>
-                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.2 / Scoped Memory Layering &amp; Supersession Plane</span>
+                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.2 / Multi-Agent Workflow Visualizer</span>
                   </div>
                 </div>
               </div>
@@ -121,9 +121,9 @@ export default function JoxyPage() {
                   Long tasks use a Worker/Watcher split. Workers emit periodic heartbeats; Watchers monitor for staleness, enforce bounded retries, and guarantee explicit exit criteria before any state commit.
                 </p>
                 <div style={{ maxWidth: "600px", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <img src="/generated assets/vh-detail-02-blue-refraction.png" alt="Mechanical Watcher Heartbeat Diagram" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                  <img src="/generated-assets/joxy_ui_agent_profile.jpg" alt="Joxy Agent Profile - Performance metrics and execution feed" style={{ width: "100%", height: "240px", objectFit: "cover", objectPosition: "top" }} />
                   <div style={{ padding: "0.75rem 1.25rem", background: "var(--bg-card)", borderTop: "1px solid var(--border-color)" }}>
-                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.3 / Worker-Watcher Distributed Heartbeat Loop</span>
+                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.3 / Agent Performance &amp; Activity Telemetry</span>
                   </div>
                 </div>
               </div>

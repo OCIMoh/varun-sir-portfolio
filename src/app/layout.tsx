@@ -6,6 +6,7 @@ import { ScrollProgressBar, MotionLayoutProvider } from "@/components/Motion";
 import { World } from "@/components/WebGL/World";
 import { Header } from "@/components/Header";
 import { Preloader } from "@/components/Preloader";
+import { SiteFooter } from "@/components/SiteFooter";
 import Link from "next/link";
 import "./globals.css";
 
@@ -91,7 +92,6 @@ export default function RootLayout({
         <CursorProvider>
           <SmoothScroll>
               <ScrollProgressBar />
-              <Wayfinding />
 
               <Header />
               
@@ -101,16 +101,7 @@ export default function RootLayout({
                 </MotionLayoutProvider>
               </main>
               
-              <footer className="footer" role="contentinfo">
-                <div>© {new Date().getFullYear()} Varun Handa</div>
-                <div className="accent-badge">Available for Select Advisory</div>
-                <div>Principal Software Architect</div>
-                <CursorTrigger>
-                  <a href="mailto:contact@varunhanda.com" style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                    contact@varunhanda.com
-                  </a>
-                </CursorTrigger>
-              </footer>
+              <SiteFooter />
           </SmoothScroll>
         </CursorProvider>
       </body>

@@ -51,13 +51,13 @@ export default function BoostitPage() {
         <RevealItem>
           <Tilt3DCard className="project-card-interactive">
             <ParallaxImage
-              src="/generated assets/vh-boostit-01-moving-frames.png"
-              alt="Boostit Deterministic Video Pipeline - Brushed aluminum rails, steel rods, and smoked glass"
+              src="/generated-assets/boostit_ui_pipeline.jpg"
+              alt="Boostit Video Pipeline UI - Multi-track timeline and preview player"
               aspectRatio="21 / 9"
               layoutId="project-image-boostit"
             />
             <div style={{ padding: "1.25rem 2rem", background: "var(--bg-card)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span className="text-meta">Fig 02.2 / The Boostit Deterministic Video Assembly Line</span>
+              <span className="text-meta">Fig 02.2 / The Boostit Deterministic Video Assembly UI</span>
               <span className="accent-badge">100+ High-Volume Render Capacity</span>
             </div>
           </Tilt3DCard>
@@ -88,7 +88,7 @@ export default function BoostitPage() {
 
       <div className="divider"></div>
 
-      {/* Infrastructure Deep-Dive with Stock Visuals */}
+      {/* Infrastructure Deep-Dive with Visuals */}
       <section className="section">
         <RevealGroup className="grid-editorial">
           <RevealItem>
@@ -104,9 +104,9 @@ export default function BoostitPage() {
                   Bridged generative AI (Google Veo, diffusion models) with rigid software engineering. The pipeline transitions deterministically through 7 discrete stages: Context → Strategy → Script → AI Generation → FFmpeg Stitching → Variations → Automated Delivery.
                 </p>
                 <div style={{ maxWidth: "600px", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <img src="/generated assets/vh-boostit-02-mechanical-rhythm.png" alt="Deterministic Pipeline Matrix" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                  <img src="/generated-assets/boostit_ui_matrix.jpg" alt="Combinatorial Modular Variation UI - Grid of video variations" style={{ width: "100%", height: "240px", objectFit: "cover", objectPosition: "top" }} />
                   <div style={{ padding: "0.75rem 1.25rem", background: "var(--bg-card)", borderTop: "1px solid var(--border-color)" }}>
-                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.4 / Combinatorial Modular Variation Assembly</span>
+                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.4 / Combinatorial Modular Variation Matrix</span>
                   </div>
                 </div>
               </div>
@@ -121,9 +121,9 @@ export default function BoostitPage() {
                   Engineered distributed worker infrastructure using BullMQ, Redis clusters, and headless FFmpeg rendering nodes to process concurrent video renders asynchronously without thread blocking or memory leaks.
                 </p>
                 <div style={{ maxWidth: "600px", borderRadius: "4px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <img src="/generated assets/vh-detail-04-amber-interior.png" alt="Asynchronous Compute Cluster Racks" style={{ width: "100%", height: "240px", objectFit: "cover" }} />
+                  <img src="/generated-assets/boostit_ui_compute.jpg" alt="Distributed Compute Dashboard - Server load and render queues" style={{ width: "100%", height: "240px", objectFit: "cover", objectPosition: "top" }} />
                   <div style={{ padding: "0.75rem 1.25rem", background: "var(--bg-card)", borderTop: "1px solid var(--border-color)" }}>
-                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.5 / Distributed Async Queue Nodes (BullMQ &amp; Redis)</span>
+                    <span className="text-meta" style={{ fontSize: "0.7rem" }}>Fig 02.5 / Async Node Cluster Dashboard (BullMQ &amp; Redis)</span>
                   </div>
                 </div>
               </div>

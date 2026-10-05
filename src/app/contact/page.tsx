@@ -31,7 +31,7 @@ export default function ContactPage() {
         <RevealItem>
           <Tilt3DCard className="project-card-interactive">
             <ParallaxImage
-              src="/images/stock/contact_pavilion.jpg"
+              src="/images/systems_detail.jpg"
               alt="Architectural pavilion overlooking calm horizon"
               aspectRatio="21 / 8"
             />
@@ -96,12 +96,12 @@ export default function ContactPage() {
                   </a>
                 </CursorTrigger>
                 <CursorTrigger>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn-editorial" style={{ fontSize: "1.05rem" }}>
+                  <a href="https://www.linkedin.com/in/varunhandaoc/" target="_blank" rel="noopener noreferrer" className="btn-editorial" style={{ fontSize: "1.05rem" }}>
                     LinkedIn ↗
                   </a>
                 </CursorTrigger>
                 <CursorTrigger>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn-editorial" style={{ fontSize: "1.05rem" }}>
+                  <a href="https://github.com/webguru221" target="_blank" rel="noopener noreferrer" className="btn-editorial" style={{ fontSize: "1.05rem" }}>
                     GitHub ↗
                   </a>
                 </CursorTrigger>

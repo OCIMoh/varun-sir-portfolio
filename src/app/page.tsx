@@ -13,13 +13,13 @@ import { ScrollSection } from "@/components/ScrollSection";
 
 export default function Home() {
   return (
-    <div className="container video-overlay" style={{ position: "relative", zIndex: 1 }}>
+    <div className="container" style={{ position: "relative", zIndex: 1 }}>
       {/* 
         HERO SECTION: Continuous Spatial Immersion 
       */}
       <ParallaxHero>
         <section className="section-xl" style={{ paddingTop: "4vh", paddingBottom: "8vh" }}>
-          <RevealGroup>
+          <RevealGroup delay={0.2}>
             <RevealItem>
               <div className="accent-badge" style={{ marginBottom: "1.5rem" }}>
                 <span>Distributed Systems &amp; Autonomous Multi-Agent Infrastructure</span>
@@ -34,7 +34,7 @@ export default function Home() {
             </h1>
           </RevealTitle>
           
-          <RevealGroup delay={0.25} className="grid-editorial" style={{ marginTop: "var(--spacing-md)" }}>
+          <RevealGroup delay={0.2} className="grid-editorial" style={{ marginTop: "var(--spacing-md)" }}>
             <RevealItem className="text-meta">
               Varun Handa <br/>
               Principal Software Architect <br/>
@@ -62,17 +62,24 @@ export default function Home() {
         SELECTED ARCHITECTURES: Shared Element Morphs (Barba.js pattern)
       */}
       <ScrollSection className="section" id="work">
-        <RevealGroup style={{ marginBottom: "var(--spacing-lg)" }}>
+        <RevealGroup delay={0.2} style={{ marginBottom: "var(--spacing-lg)", minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <RevealItem>
             <div className="accent-badge" style={{ marginBottom: "0.5rem" }}>
               <span>Case Studies 2025–2026</span>
             </div>
             <h2 className="display-3">Selected Architectures</h2>
+            
+            <div className="animate-bounce" style={{ marginTop: "4rem", display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--text-secondary)" }}>
+              <span style={{ fontSize: "1.2rem" }}>↓</span>
+              <span className="text-meta" style={{ letterSpacing: "0.05em" }}>Scroll to explore</span>
+            </div>
           </RevealItem>
         </RevealGroup>
+      </ScrollSection>
         
-        {/* CASE STUDY 01: JOXY.AI */}
-        <RevealGroup className="grid-asymmetric" style={{ marginBottom: "var(--spacing-xl)" }}>
+      {/* CASE STUDY 01: JOXY.AI */}
+      <ScrollSection className="section">
+        <RevealGroup delay={0.2} className="grid-asymmetric" style={{ marginBottom: "var(--spacing-xl)", minHeight: "100vh", alignItems: "center" }}>
           <div>
             <RevealItem>
               <div className="tag" style={{ marginBottom: "1rem" }}>Feb 2026 – Present</div>
@@ -98,8 +105,8 @@ export default function Home() {
                   <Tilt3DCard className="project-card-interactive">
                     <div className="project-meta-pill">Physical Multi-Agent Routing Engine</div>
                     <ParallaxImage 
-                      src="/generated assets/vh-joxy-01-kinetic.png" 
-                      alt="Joxy Agent OS - Machined brass routing tracks and dark slate execution nodes" 
+                      src="/generated-assets/joxy_ui_dashboard.jpg" 
+                      alt="Joxy Agent Dashboard UI" 
                       aspectRatio="16 / 11"
                       layoutId="project-image-joxy"
                     />
@@ -120,9 +127,11 @@ export default function Home() {
             </RevealItem>
           </div>
         </RevealGroup>
+      </ScrollSection>
 
-        {/* CASE STUDY 02: BOOSTIT */}
-        <RevealGroup className="grid-asymmetric" style={{ marginBottom: "var(--spacing-lg)" }}>
+      {/* CASE STUDY 02: BOOSTIT */}
+      <ScrollSection className="section">
+        <RevealGroup delay={0.2} className="grid-asymmetric" style={{ marginBottom: "var(--spacing-lg)", minHeight: "100vh", alignItems: "center" }}>
           <div>
             <RevealItem>
               <div className="tag" style={{ marginBottom: "1rem" }}>Feb 2025 – Present</div>
@@ -148,8 +157,8 @@ export default function Home() {
                   <Tilt3DCard className="project-card-interactive">
                     <div className="project-meta-pill">Deterministic Video Assembly</div>
                     <ParallaxImage 
-                      src="/generated assets/vh-boostit-01-moving-frames.png" 
-                      alt="Boostit Kinetic Pipeline - Brushed aluminum rails and dark smoked glass partitions" 
+                      src="/generated-assets/boostit_ui_pipeline.jpg" 
+                      alt="Boostit Video Pipeline UI" 
                       aspectRatio="16 / 11"
                       layoutId="project-image-boostit"
                     />
@@ -176,42 +185,23 @@ export default function Home() {
         TACTILE SYSTEMS & PHYSICAL RIGOR (Atmospheric Transition)
       */}
       <ScrollSection className="section">
-        <RevealGroup className="grid-editorial" style={{ alignItems: "center" }}>
-          <div>
-            <RevealItem>
-              <div className="accent-badge" style={{ marginBottom: "0.5rem" }}>
-                <span>Philosophy &amp; Execution</span>
-              </div>
-              <h2 className="display-3" style={{ marginBottom: "1.5rem" }}>
-                "Done is a claim.<br/>Verified is a fact."
-              </h2>
-              <p className="text-body" style={{ marginBottom: "1.5rem" }}>
-                Completion requires passing explicit exit criteria, not an agent’s self-report. Without automated verification gates, distributed autonomous systems merely compound error rates over time.
-              </p>
-              <CursorTrigger>
-                <Link href="/about" className="btn-editorial">
-                  Explore full engineering tenets <span className="hover-arrow">→</span>
-                </Link>
-              </CursorTrigger>
-            </RevealItem>
-          </div>
-
-          <div>
-            <RevealItem>
-              <Tilt3DCard className="project-card-interactive" style={{ maxWidth: "600px" }}>
-                <ParallaxImage 
-                  src="/generated assets/vh-detail-05-aperture.png" 
-                  alt="Architectural travertine louvers with soft grazing light" 
-                  aspectRatio="16 / 10"
-                />
-                <div style={{ padding: "1rem 1.5rem", background: "var(--bg-card)" }}>
-                  <p className="text-meta" style={{ fontSize: "0.72rem" }}>
-                    Fig 01.3 / Architectural Structural Rigor &amp; Tolerance
-                  </p>
-                </div>
-              </Tilt3DCard>
-            </RevealItem>
-          </div>
+        <RevealGroup delay={0.2} style={{ minHeight: "80vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", maxWidth: "800px", margin: "0 auto" }}>
+          <RevealItem>
+            <div className="accent-badge" style={{ marginBottom: "1.5rem" }}>
+              <span>Philosophy &amp; Execution</span>
+            </div>
+            <h2 className="display-2" style={{ marginBottom: "2.5rem", fontSize: "clamp(2.5rem, 5vw, 4.5rem)", lineHeight: 1.1 }}>
+              "Done is a claim.<br/>Verified is a fact."
+            </h2>
+            <p className="text-lead" style={{ marginBottom: "3rem", maxWidth: "700px", margin: "0 auto 3rem auto" }}>
+              Completion requires passing explicit exit criteria, not an agent’s self-report. Without automated verification gates, distributed autonomous systems merely compound error rates over time.
+            </p>
+            <CursorTrigger>
+              <Link href="/about" className="btn-editorial">
+                Explore full engineering tenets <span className="hover-arrow">→</span>
+              </Link>
+            </CursorTrigger>
+          </RevealItem>
         </RevealGroup>
       </ScrollSection>
 
@@ -219,7 +209,7 @@ export default function Home() {
         TECHNICAL JOURNAL: Curated Insights with Stock Thumbnails
       */}
       <ScrollSection className="section" id="writing">
-        <RevealGroup className="grid-editorial">
+        <RevealGroup delay={0.2} className="grid-editorial" style={{ minHeight: "100vh", alignItems: "center" }}>
           <RevealItem>
             <div className="accent-badge" style={{ marginBottom: "0.5rem" }}>
               <span>Writing</span>
@@ -234,7 +224,7 @@ export default function Home() {
             <RevealItem>
               <CursorTrigger className="project-card" style={{ display: "block" }}>
                 <Link href="/writing" style={{ display: "block", borderBottom: "1px solid var(--border-color)", paddingBottom: "var(--spacing-sm)" }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "1.5rem", alignItems: "center" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.5rem", alignItems: "center" }}>
                     <div>
                       <span className="text-meta" style={{ display: "block", marginBottom: "0.5rem" }}>Sep 2026 / Agentic Infra</span>
                       <h3 className="display-3" style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
@@ -244,9 +234,6 @@ export default function Home() {
                         Heartbeats, bounded retries, and explicit state machines. Why long-running agentic tasks require distributed systems rigor.
                       </p>
                     </div>
-                    <div style={{ width: "90px", height: "90px", borderRadius: "4px", overflow: "hidden", flexShrink: 0 }} className="image-container-editorial">
-                      <img src="/generated assets/vh-economics-01-balance.png" alt="Watcher pattern architectural stone" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                    </div>
                   </div>
                 </Link>
               </CursorTrigger>
@@ -255,7 +242,7 @@ export default function Home() {
             <RevealItem>
               <CursorTrigger className="project-card" style={{ display: "block" }}>
                 <Link href="/writing" style={{ display: "block", borderBottom: "1px solid var(--border-color)", paddingBottom: "var(--spacing-sm)" }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "1.5rem", alignItems: "center" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.5rem", alignItems: "center" }}>
                     <div>
                       <span className="text-meta" style={{ display: "block", marginBottom: "0.5rem" }}>Jul 2026 / Economics</span>
                       <h3 className="display-3" style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
@@ -264,9 +251,6 @@ export default function Home() {
                       <p className="text-body">
                         A concrete framework for reducing LLM token costs by up to 90% without sacrificing capability or output accuracy.
                       </p>
-                    </div>
-                    <div style={{ width: "90px", height: "90px", borderRadius: "4px", overflow: "hidden", flexShrink: 0 }} className="image-container-editorial">
-                      <img src="/generated assets/vh-joxy-02-memory-layers.png" alt="Economics architectural cantilever" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                   </div>
                 </Link>
@@ -281,6 +265,72 @@ export default function Home() {
               </CursorTrigger>
             </RevealItem>
           </div>
+        </RevealGroup>
+      </ScrollSection>
+      {/* 
+        FINAL CTA 
+      */}
+      <ScrollSection className="section" id="cta">
+        <RevealGroup delay={0.2} style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+          <RevealItem>
+            <h2
+              className="display-1"
+              style={{
+                fontSize: "clamp(3rem, 8vw, 8rem)",
+                marginBottom: "var(--spacing-md)",
+                maxWidth: "1400px",
+                lineHeight: 1.1,
+                fontFamily: "var(--font-serif)",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Build what scales.
+            </h2>
+          </RevealItem>
+          
+          <RevealItem>
+            <div style={{ marginTop: "4rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "2rem",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginBottom: "3rem",
+                  flexDirection: "column",
+                }}
+              >
+                <div
+                  style={{
+                    maxWidth: "480px",
+                    fontSize: "1.1rem",
+                    lineHeight: 1.6,
+                    color: "var(--text-secondary)",
+                    marginBottom: "1rem"
+                  }}
+                >
+                  Systems, products, infrastructure and ideas that need
+                  more than the obvious solution.
+                </div>
+
+                <CursorTrigger state="accent">
+                  <Link
+                    href="/about"
+                    className="btn-editorial"
+                    style={{ 
+                      fontSize: "1.1rem",
+                      padding: "1rem 2rem",
+                      background: "var(--text-primary)",
+                      color: "var(--bg-color)"
+                    }}
+                  >
+                    Start a conversation
+                    <span className="hover-arrow" style={{ marginLeft: "0.5rem" }}>↗</span>
+                  </Link>
+                </CursorTrigger>
+              </div>
+            </div>
+          </RevealItem>
         </RevealGroup>
       </ScrollSection>
     </div>
